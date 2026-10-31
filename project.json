@@ -1,0 +1,1 @@
+{"company":"Cohere","title":"Citation Flight Recorder","test_command":"npm test","demo_command":"npm run demo","scope":"Authored Cohere-shaped UTF-8 stream replay and citation/source-version integrity; separate fixture support labels, no live API or automatic entailment","implemented":true,"integration_status":"unverified"}

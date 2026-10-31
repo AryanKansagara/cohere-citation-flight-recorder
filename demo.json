@@ -1,0 +1,117 @@
+{
+  "experiment": "same_authored_events_different_byte_boundaries",
+  "wire_bytes": 1743,
+  "chunk_sizes": [
+    1,
+    7,
+    4096
+  ],
+  "boundary_invariant": true,
+  "report": {
+    "schema_version": 1,
+    "provenance": "authored_fixture_not_live_cohere",
+    "offset_unit": "unicode-code-points",
+    "events": 13,
+    "answers": [
+      {
+        "version": "answer-v1",
+        "text": "🧭 Café ☕ serves tea. The Moon is cheese.",
+        "sha256": "f932aaa782ac1f969ba3baaf0d777452f246a773ba3d48f41fea61f5fbdb618c",
+        "ended": true,
+        "code_points": 40,
+        "utf16_units": 41,
+        "citations": [
+          {
+            "id": "cafe",
+            "start": 2,
+            "end": 20,
+            "cited_text": "Café ☕ serves tea.",
+            "structurally_valid": true,
+            "structural_errors": [],
+            "sources": [
+              {
+                "id": "menu",
+                "version": "v1",
+                "resolved": true,
+                "sha256": "13553df6286e1df6a9f57ac29947662d3fea3d75c229bdd9bfaab650d069f8a2"
+              }
+            ],
+            "semantic_support": "supported",
+            "semantic_support_method": "authored_fixture_label_not_model_judgment"
+          },
+          {
+            "id": "moon",
+            "start": 21,
+            "end": 40,
+            "cited_text": "The Moon is cheese.",
+            "structurally_valid": true,
+            "structural_errors": [],
+            "sources": [
+              {
+                "id": "science",
+                "version": "v1",
+                "resolved": true,
+                "sha256": "3763faa07268fd944773cb3ee26724712f03ee655033b825072dbf4070f3fca4"
+              }
+            ],
+            "semantic_support": "unsupported",
+            "semantic_support_method": "authored_fixture_label_not_model_judgment"
+          }
+        ]
+      },
+      {
+        "version": "answer-v2",
+        "text": "UPDATE: 🧭 Café ☕ serves tea.",
+        "sha256": "3b561861c475e191f1ebdafd60b47df375eb4c2414f4bbd5e11c43ad03e0b21a",
+        "ended": true,
+        "code_points": 28,
+        "utf16_units": 29,
+        "citations": [
+          {
+            "id": "copied",
+            "start": 2,
+            "end": 20,
+            "cited_text": "Café ☕ serves tea.",
+            "structurally_valid": false,
+            "structural_errors": [
+              "span_text_mismatch"
+            ],
+            "sources": [
+              {
+                "id": "menu",
+                "version": "v1",
+                "resolved": true,
+                "sha256": "13553df6286e1df6a9f57ac29947662d3fea3d75c229bdd9bfaab650d069f8a2"
+              }
+            ],
+            "semantic_support": "unreviewed",
+            "semantic_support_method": "authored_fixture_label_not_model_judgment"
+          },
+          {
+            "id": "missing",
+            "start": 10,
+            "end": 28,
+            "cited_text": "Café ☕ serves tea.",
+            "structurally_valid": false,
+            "structural_errors": [
+              "dangling_source_version"
+            ],
+            "sources": [
+              {
+                "id": "menu",
+                "version": "missing",
+                "resolved": false,
+                "sha256": null
+              }
+            ],
+            "semantic_support": "unreviewed",
+            "semantic_support_method": "authored_fixture_label_not_model_judgment"
+          }
+        ]
+      }
+    ],
+    "structurally_invalid": 2,
+    "unsupported_fixture_labels": 1,
+    "limits": "Structural integrity does not establish factual support; source/answer version fields and offset contract are local fixture extensions."
+  }
+}
